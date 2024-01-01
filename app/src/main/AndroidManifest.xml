@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MePlanner"
+        tools:targetApi="31">
+        <activity
+            android:name=".timetable.ShowSchedule"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".plan.AddingPlan"
+            android:exported="false" />
+        <activity
+            android:name=".alarmmanager.SetAlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".alarmmanager.AlarmsList"
+            android:exported="false" />
+        <activity
+            android:name=".task.EditNote"
+            android:exported="false" />
+        <activity
+            android:name=".calendar.ShowCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".calendar.ScheduleCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.NotificationList"
+            android:exported="false" />
+        <activity
+            android:name=".timetable.Schedule"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".task.AddTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".task.UpdateTaskAcitvity"
+            android:exported="false" />
+        <activity
+            android:name=".task.ShowTaskDetails"
+            android:exported="false" />
+        <activity
+            android:name=".task.TaskManagement"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <receiver android:name=".alarmmanager.AlarmReceiver" />
+        <receiver android:name=".notifications.NotificationReceiver" />
+    </application>
+
+</manifest>
